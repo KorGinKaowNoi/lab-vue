@@ -1,14 +1,14 @@
 import axios from 'axios'
-const apiClient = axios.create({
-    baseURL:'http://localhost:3004',
+const student_api = axios.create({
+    baseURL:'https://dv-student-backend-2019.appspot.com/',
     withCredentials:false,
     headers:{
         Accept:'application/json',
         'Content-type':'application/json'
-    }
+    }  
 })
 export default{
-    getEvent(){
-        return apiClient.get('/events')
+    getStudents(){
+        return student_api.get('/students');
     }
 }
