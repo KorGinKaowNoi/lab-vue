@@ -2,8 +2,9 @@
   <div class="event-card">
     <span
       >@{{ event.time }} on {{ event.date }}
-      <h3>{{ event.title }}</h3>
+      <h4>{{ event.title }}</h4>
     </span>
+    <Category style="text-align:right; font-size:25px" :Category="event" />
   </div>
 </template>
 <style scoped>
@@ -20,23 +21,36 @@
 }
 </style>
 <script>
+import Category from './Category-Organizer.vue'
 export default {
   name: 'EventCard',
-  data() {
-    return {
-      event: {
-        id: 622115017,
-        category: 'animal welfare',
-        title: 'cat adoption day',
-        descreiption: 'this is just a priciple',
-        location: 'Thailand',
-        date: '12 August 2000',
-        time: '12.00',
-        petsAllowed: 'cat dog',
-        organizer: 'gamu',
-        fav_charater: 'Power!!'
-      }
+  components:{
+      Category
+  },
+  props: {
+    event: {
+        type: Object,
+        required: true
+      
     }
-  }
+  },
+
+    data() {
+    //   return {
+    //     categories: [
+    //         {category: 'animal welfare',
+    //         organizer: 'Kat Laydee'
+    //         },
+    //         {
+    //             category: 'food',
+    //              organizer: 'Fern Pollin'
+    //         },
+    //         {
+    //             category: 'sustainability',
+    //             organizer: 'Carey Wales'
+    //         }
+    //     ]
+    //   }
+    }
 }
 </script>
