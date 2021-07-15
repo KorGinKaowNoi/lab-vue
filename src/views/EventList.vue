@@ -1,4 +1,6 @@
 <template>
+    <h1>gamu</h1>
+
   <div class="events">
     <EventCard v-for="event in events" :key="event.id" :event="event" />
   </div>
@@ -9,7 +11,7 @@
 
 import EventCard from '../components/EventCard.vue';
 export default {
-  name: 'Home',
+  name: 'EventList',
   components: {
     EventCard
   },
