@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import EventList from '../views/EventList.vue'
 import About from '../views/About';
+import Cat from '../views/Cat';
 const routes = [
   {
     path: '/',
@@ -18,7 +19,7 @@ const routes = [
   {
     path: '/cat',
     name:'cat',
-    component:About
+    component:Cat
   }
 ]
 

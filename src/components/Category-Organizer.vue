@@ -1,3 +1,10 @@
+<style scoped>
+.ctg {
+  font-size: 35px;
+  text-align: right;
+}
+
+</style>
 <template class="ctg">
   <div>
     <span
@@ -6,13 +13,6 @@
     </span>
   </div>
 </template>
-<style scoped>
-.ctg {
-  font-size: 35px;
-  text-align: right;
-}
-
-</style>
 <script>
 
 export default {
